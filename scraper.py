@@ -10,10 +10,11 @@ from dateutil.parser import parse
 
 # Set up variables
 entity_id = "E0304_SBC_gov"
-urls = [ "http://www.slough.gov.uk/council/performance-and-spending/payment-reports-april-2014-to-march-2015.aspx",
-      "http://www.slough.gov.uk/council/performance-and-spending/payment-reports-april-2013-to-march-2014.aspx",
-      "http://www.slough.gov.uk/council/performance-and-spending/payment-reports-april-2012-to-march-2013.aspx",
-      "http://www.slough.gov.uk/council/performance-and-spending/payment-reports-april-2011-to-march-2012.aspx"]
+urls = [ "http://www.slough.gov.uk/council/performance-and-spending/payment-reports-april-2015-to-march-2016.aspx",
+         "http://www.slough.gov.uk/council/performance-and-spending/payment-reports-april-2014-to-march-2015.aspx",
+         "http://www.slough.gov.uk/council/performance-and-spending/payment-reports-april-2013-to-march-2014.aspx",
+         "http://www.slough.gov.uk/council/performance-and-spending/payment-reports-april-2012-to-march-2013.aspx",
+         "http://www.slough.gov.uk/council/performance-and-spending/payment-reports-april-2011-to-march-2012.aspx"]
 errors = 0
 # Set up functions
 def validateFilename(filename):
