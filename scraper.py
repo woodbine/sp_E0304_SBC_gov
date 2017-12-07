@@ -101,13 +101,12 @@ import requests
 
 html = requests.get(url)
 r_soup = BeautifulSoup(html.text, "lxml")
-links = r_soup.find('ul', 'childrenList').find_all('li')
-for link in links:
-    link = 'http://www.slough.gov.uk'+link.find('a')['href']
-    html = requests.get(link)
+blocks = r_soup.find('ul', 'childrenList').find_all('li')
+for block in blocks:
+    link_page = 'http://www.slough.gov.uk'+block.find('a')['href']
+    html = requests.get(link_page)
     soup = BeautifulSoup(html.text, "lxml")
-    block = soup.find('div', attrs = {'class':'content imagesRight'})
-    links = block.findAll('a')
+    links = soup.find('div', 'content imagesRight').findAll('a')
     for link in links:
         if '.csv' in link['href']:
             url = 'http://www.slough.gov.uk' + link['href']
